@@ -1,4 +1,4 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, session
 
 API = Blueprint('api', __name__)
 
@@ -8,7 +8,13 @@ def api_login():
     data = request.form.to_dict()
     username = data['username']
     password = data['password']
-    if (username == 'asd' and password == '123'):
-        return "T"
-    else:
-        return "F"
+    dict_user = {"testuser": "testpassword"}
+    try:
+        if (dict_user[username] == password):
+            session['user'] = username
+        else:
+            return "Error"
+        return "Login success"
+    except KeyError:
+        return "No user"
+
