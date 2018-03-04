@@ -1,5 +1,4 @@
-from flask import Blueprint, request, session
-
+from flask import Blueprint, request, url_for, redirect, session
 API = Blueprint('api', __name__)
 
 
@@ -17,4 +16,10 @@ def api_login():
         return "Login success"
     except KeyError:
         return "No user"
+    return "strange error"
 
+
+@API.route('/logout/')
+def api_logout():
+    session.pop('user', None)
+    return redirect(url_for('index.index'))

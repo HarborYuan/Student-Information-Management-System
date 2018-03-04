@@ -15,11 +15,11 @@ $("#submit").click(function(){
         {
             if (data === 'Error')
             {
-                $("#login-info").text("密码错误");
+                $("#login-info-span").text("密码错误");
             }
             else 
             {
-                $('#login-info').text("不存在该用户");
+                $('#login-info-span').text("不存在该用户");
             }
         }
         //console.log(data);
