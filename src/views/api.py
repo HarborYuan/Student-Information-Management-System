@@ -21,5 +21,6 @@ def api_login():
 
 @API.route('/logout/')
 def api_logout():
-    session.pop('user', None)
+    if 'user' in session:
+        session.pop('user', None)
     return redirect(url_for('index.index'))
