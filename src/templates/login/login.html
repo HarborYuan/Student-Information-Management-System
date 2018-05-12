@@ -1,4 +1,4 @@
-{% extends "base.html" %} 
+﻿{% extends "base.html" %} 
 {% block contents %}
 <section id="login_form">
     <div class="container">
@@ -14,16 +14,18 @@
                 <form class="row" id="admin_login" action="" method="post">
                     <div class="input-field col s12">
                         <input name="username" class="validate" id="username" type="text">
-                        <label for="username">Name</label>
+                        <label for="username">学号</label>
                     </div>
                     <div class="input-field col s12">
                         <input name="password" class="validate" id="password" type="password">
-                        <label class="active" for="password">Password</label>
+                        <label class="active" for="password">密码</label>
                     </div>
-                    <p class="waves-effect waves-light btn" id="submit" type="submit">
+                    <div>
+                    <a class="waves-effect waves-light btn" id="submit">
                         确认
                         <i class="material-icons right">send</i>
-                    </p> 
+                    </a>
+                    </div>
                 </form>
             </div>
         </div>

@@ -5,4 +5,4 @@ LOGIN = Blueprint('login', __name__)
 
 @LOGIN.route('/')
 def login():
-    return render_template('login/login.html')
+    return render_template('login/login.html', is_login=False)
