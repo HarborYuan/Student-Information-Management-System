@@ -29,7 +29,7 @@
                         <label class="active" for="password2">重复密码</label>
                     </div>
                     <div class="input-field col s12">
-                        <select>
+                        <select id="major">
                           <option value="" disabled selected>请选择专业</option>
                           {% for major in majors %}
                             <option value="{{ major[0] }}">{{ major[1] }}</option>
@@ -48,7 +48,7 @@
                     <div class="input-field col s12">
                     <p>
                         <label>
-                          <input type="checkbox" />
+                          <input  id="isGirl" type="checkbox" />
                           <span>妹子</span>
                         </label>
                     </p>
